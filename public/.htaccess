@@ -1,0 +1,14 @@
+#Ukljucuje engine za prepisivanje URL-ova
+RewriteEngine On
+
+#Pravilo se ne primenjuje ako je zahtev upucen na postojeci direktorijum
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Pravilo se ne primenjuje ako je zahtev upucen na postojeci fajl
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Sve ostale zahteve preusmerava na index.php, prosledjujuci iriginalni URL kao parametar
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+#http://localhost/book-store/public/book/id/8
+#http://localhost/book-store/publi/index?url=book/id/8

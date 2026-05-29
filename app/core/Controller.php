@@ -8,7 +8,7 @@ class Controller
         return new $model();
     }
 
-    protected function renderView($viewPath, $data = [], $title = "Book Strore")
+    protected function renderView($viewPath, $data = [], $title = "Book Store")
     {
         extract($data);
         require_once '../app/views/layout.php';
