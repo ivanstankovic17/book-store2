@@ -1,5 +1,12 @@
 {
-  "require": {
-    "ext-pdo": "*"
-  }
+    "name": "ivans/book-store",
+    "authors": [
+        {
+            "name": "Ivan Stankovic",
+            "email": "ivan.stankovic@pmf.edu.rs"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^4.0"
+    }
 }
